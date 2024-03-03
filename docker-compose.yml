@@ -13,3 +13,6 @@ services:
       context: .
       dockerfile: WebAPI/Dockerfile
 
+  redis:
+    image: redis
+
