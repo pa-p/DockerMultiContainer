@@ -6,3 +6,10 @@ services:
     build:
       context: .
       dockerfile: WebFrontEnd/Dockerfile
+
+  webapi:
+    image: ${DOCKER_REGISTRY-}webapi
+    build:
+      context: .
+      dockerfile: WebAPI/Dockerfile
+
