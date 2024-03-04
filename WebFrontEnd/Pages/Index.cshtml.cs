@@ -18,7 +18,7 @@ namespace WebFrontEnd.Pages
             // Call *mywebapi*, and display its response in the page
             var request = new HttpRequestMessage();
             // webapi is the container name
-            request.RequestUri = new Uri("http://webapi/Counter");
+            request.RequestUri = new Uri("http://webapi:8080/Counter");
             var response = await client.SendAsync(request);
             string counter = await response.Content.ReadAsStringAsync();
             ViewData["Message"] = $"Counter value from cache :{counter}";
